@@ -1,2 +1,7 @@
-# mpp-corazza
-Modern Programming Practice course by Prof. Paul Corazza
+# MPP-corazza
+
+<h1 align=center>Modern Programming Practices </h1>
+
+Course Instructor: Paul Corazza (PhD)
+
+<p>Maharishi International University.</p> (2021)
