@@ -1,0 +1,45 @@
+soution is already in the code.
+
+Here are the changes in the business/Main.java
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println(allWhoseZipContains3());
+		System.out.println(allHavingAtLeastTwoCopies());
+		System.out.println(allHavingMultipleAuthors());
+
+	}
+	//Returns a list of all ids of LibraryMembers whose zipcode contains the digit 3
+	public static List<String> allWhoseZipContains3() {
+		return
+				new DataAccessFacade()
+				.readMemberMap().values()
+				.stream()
+				.filter(member -> member.getAddress().getZip().indexOf('3')>=0)
+				.map(member -> member.getMemberId())
+				.collect(Collectors.toList());
+	}
+	//Returns a list of all isbns of books having at least two copies
+	public static List<String> allHavingAtLeastTwoCopies() {
+		return
+				new DataAccessFacade()
+				.readBooksMap().values()
+				.stream()
+				.filter(book -> book.getNumCopies()>=2)
+				.map(book -> book.getIsbn())
+				.collect(Collectors.toList());		
+	}
+
+	//Returns a list of all isbns of  Books that have multiple authors
+	public static List<String> allHavingMultipleAuthors() {
+		return
+				new DataAccessFacade()
+				.readBooksMap().values()
+				.stream()
+				.filter(book -> book.getAuthors().size()>1)
+				.map(book -> book.getIsbn())
+				.collect(Collectors.toList());
+		}
+
+}

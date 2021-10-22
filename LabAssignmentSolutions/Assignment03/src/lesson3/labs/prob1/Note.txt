@@ -1,0 +1,8 @@
+1.		System.out.println("p1.equals(p2)? " + p1.equals(p2));
+2.		System.out.println("p2.equals(p1)? " + p2.equals(p1));
+
+(1) is false because the equals method applied during runtime is the one defined in PersonWithJob,
+    and Person object is not an instance of a PersonWithJob class.
+    
+(2) is true because the equals method applied during runtime is the one defined in Person, 
+    and PersonWithJob object is instance of a Person and they both have the same name.

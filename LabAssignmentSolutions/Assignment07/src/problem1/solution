@@ -1,0 +1,22 @@
+1A. ArrayList implements Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess
+    ArrayList inherits java.util.AbstractList<E>
+
+1B. The equals method being used in `contains` inside the method 'listsAreEqual' is the one inherited from Object
+    not the one defined their.
+
+1C. The containsKey in removeDuplicates compares keys by their hashCode. but here the default
+    hashCode is being used, because its not overriden. With the default hashCode, any two
+    objects have different hashcode no matter their attribute values, and therefore containsKeys
+    always returns false;
+
+1D. HashMap is used to track duplicates and equals and hashCode have been
+    implemented correctly in Employee. However, values in the HashMap are modified 
+    while it is updated, leading to incorrect results (violating principle that keys should be immutable)
+
+1Ei. When D is a class and A, B, C are interfaces:
+	if either B.method() or C.method() is a default method, 
+	then D has to override method() or declare it abstract if D is abstract
+        
+    When D is an interface,
+	if either B.method() or C.method() is default method,
+	then D has to override method()

@@ -1,0 +1,7 @@
+2.
+	A. If two Employee objects have the same name, what is the return value of compare? true
+	
+	 Give an example of two Employee objects having the same name but that should not be considered equal.
+	 `new Employee("aven", 1)` and `new Employee("aven",2)`
+	 
+	 

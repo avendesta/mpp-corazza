@@ -1,0 +1,39 @@
+A.
+	i.  Parameter: <none>
+		Free variable: s, t
+
+	ii. Parameter: s, t
+		Free variable: ignoreCase
+	
+B.	i. Supplier<Double> randomValue = () -> Math.random()
+	ii. 
+		package problem1;
+		import java.util.function.Supplier;
+		public class Problem1B_i {
+			public static void main(String[] args) {
+				Supplier<Double> rand = () -> Math.random();
+				System.out.println(rand.get());
+			}
+		}
+	
+	iii. 
+		package problem1;
+
+		import java.util.function.Supplier;
+	
+		public class Problem1B_ii {
+			public static void main(String[] args) {
+				Problem1B_ii x = new Problem1B_ii();
+				Randomer rand = x.new Randomer();
+				System.out.println(rand.get());
+			}
+		
+			class Randomer implements Supplier<Double>{	
+
+				@Override
+				public Double get() {
+					return Math.random();
+				}
+				
+			}
+		}

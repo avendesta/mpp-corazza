@@ -1,0 +1,10 @@
+Does it make sense to use inheritance here?
+
+ - No, it doesn't make sense to use inheritance. First a Circle is barely a type of a Cylinder,
+   a circle is 2D object (its meaningless to talk about volume of 2D objects) 
+   while Cylinder is 3D, and zero height cylinder is not the definition of a circle
+   
+   
+   It's also not useful to use inheritance when the two classes have only few things in common. 
+   there might come another class, which the circle class may extend, like ClosedCurve class, and
+   java only allows single inheritance
